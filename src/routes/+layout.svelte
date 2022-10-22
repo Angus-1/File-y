@@ -1,7 +1,7 @@
 <script>
   import Navbar from "$lib/components/Navbar.svelte";
-  import { isLoggedIn } from "../stores/authStore";
-  import App from "./fb";
+  import { isLoggedIn } from "../lib/components/utils/authStore";
+  import App from "../lib/components/utils/fb";
 
   import { onMount } from "svelte";
 
@@ -29,8 +29,7 @@
     font-family: "Open Sans", sans-serif;
     width: 75%;
     margin: 0 auto;
-    background-color: #f7f7f7;
-    border: 1px solid black;
+    background-color: #1a1919;
   }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     :global(body) {

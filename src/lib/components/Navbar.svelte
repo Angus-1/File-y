@@ -2,7 +2,7 @@
   import { goto } from "$app/navigation";
   import { getAuth, signOut } from "firebase/auth";
   
-  import { isLoggedIn } from "../../stores/authStore";
+  import { isLoggedIn } from "./utils/authStore";
 
   const auth = getAuth();
 

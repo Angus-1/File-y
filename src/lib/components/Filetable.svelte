@@ -78,3 +78,10 @@
     {/each}
   </tbody>
 </table>
+
+<style>
+  .button
+  {
+    background-color:black;
+  }
+</style>

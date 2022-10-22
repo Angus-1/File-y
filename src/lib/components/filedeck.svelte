@@ -169,8 +169,13 @@
 </div>
 
 <style>
+  .accordion-button {
+    box-shadow: none;
+    background-color: #1b1b1b;
+    color:white;
+  }
   .accordion-button:focus {
     box-shadow: none;
-    border-color: rgba(0, 0, 0, 0.125);
   }
+  
 </style>
