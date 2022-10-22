@@ -41,7 +41,6 @@
         functionProp();
       })
       .catch((error) => {
-        // Uh-oh, an error occurred!
       });
   }
 

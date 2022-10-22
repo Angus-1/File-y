@@ -22,7 +22,7 @@
 
   <li class="nav-item">
     <a class="nav-link" target="_blank" href="https://www.angelsantoyo.com/"
-      >My Website</a
+      >made by angel with 💙 </a
     >
   </li>
   {#if $isLoggedIn}
