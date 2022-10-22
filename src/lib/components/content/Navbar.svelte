@@ -31,7 +31,7 @@
         class="nav-link"
         on:click|preventDefault={logout}
         target="_blank"
-        href="/">Sign Out</a
+        href="/">sign out</a
       >
     </li>
   {/if}
