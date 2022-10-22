@@ -1,5 +1,5 @@
 <script>
-  import Navbar from "$lib/components/content/Navbar.svelte";
+  import Navbar from "$lib/components/Navbar.svelte";
   import { isLoggedIn } from "../stores/authStore";
   import App from "./fb";
 

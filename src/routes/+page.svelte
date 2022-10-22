@@ -1,6 +1,6 @@
 <script>
 
-import Filedeck from "$lib/components/content/filedeck.svelte";
+import Filedeck from "$lib/components/filedeck.svelte";
 </script>
 
 <Filedeck/>
