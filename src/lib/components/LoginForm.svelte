@@ -93,12 +93,13 @@
     margin-top: 50px;
     margin-bottom: 50px;
     color:white;
-
+    font-weight:400;
   }
   .login-form {
     width: 60%;
     margin: 0 auto;
     color:white;
+    font-weight:400;
 
   }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
