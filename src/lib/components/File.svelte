@@ -53,16 +53,13 @@
     {#each data as { name, timeCreated, size }}
     <hr>
       <div>
-
         <div class="title">{name}</div>
         
-
         <div class = info > 
         <div class = bytes >date: {timeCreated.substring(0, 10)}</div>
         <div class = bytes >size: {bytesToSize(size)}</div>
       </div>
 
-      
         <div>
           <button
             class="btn btn-primary"
@@ -75,7 +72,6 @@
         </div>
       </div>
     {/each}
-
   </div>
 
 <style>

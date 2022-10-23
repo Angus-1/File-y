@@ -1,5 +1,5 @@
 <script>
-  import Filetable from "./Filetable.svelte";
+  import File from "./File.svelte";
   import UploadRow from "./Upload.svelte";
   import { getStorage, ref, getMetadata, listAll } from "firebase/storage";
   import { onMount } from "svelte";
@@ -38,7 +38,7 @@
         <div class = header> Welcome to your files </div>      
         <UploadRow folder="fbFiles" functionProp={() => getFileData()} />
         {#if files.fbFiles.length > 0}
-          <Filetable
+          <File
             data={files.fbFiles}
             folder="fbFiles"
             functionProp={() => getFileData()}
