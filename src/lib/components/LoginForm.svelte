@@ -87,30 +87,27 @@
   .card {
     width: 50%;
     margin: 0 auto;
-    background-color: rgb(22, 22, 22);
-
+    color:white;
   }
   .login {
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: rgb(22, 22, 22);
+    color:white;
 
   }
   .login-form {
     width: 60%;
     margin: 0 auto;
-    background-color: rgb(22, 22, 22);
+    color:white;
 
   }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .login-form {
       width: 90%;
-      background-color: rgb(22, 22, 22);
 
     }
     .card {
       width: 90%;
-      background-color: rgb(22, 22, 22);
 
     }
   }
