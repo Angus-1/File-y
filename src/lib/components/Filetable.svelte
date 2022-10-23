@@ -53,9 +53,16 @@
     {#each data as { name, timeCreated, size }}
     <hr>
       <div>
+
         <div class="title">{name}</div>
-        <div class = bytes >{timeCreated.substring(0, 10)}</div>
-        <div class = bytes >{bytesToSize(size)}</div>
+        
+
+        <div class = info > 
+        <div class = bytes >date: {timeCreated.substring(0, 10)}</div>
+        <div class = bytes >size: {bytesToSize(size)}</div>
+      </div>
+
+      
         <div>
           <button
             class="btn btn-primary"
@@ -75,21 +82,37 @@
     .table{
     margin-top: 20px;
     background-color: rgb(31, 48, 100);
-    border-radius: 10px;
     padding:10px;
-    justify-content: center;
+    color:rgb(255, 253, 253);
+    border-radius: 10px;
+  padding: 1rem;
+  font-weight: 500;
+  
   }
   .title{
     color:white;
-    font-size:2rem;
+    font-size:1.5rem;
   }
   .button
   {
     background-color:black;
   }
+  
 
- .bytes{
+
+
+ .info
+ {
   color:rgb(255, 253, 253);
+  background-color: transparent;
+  border-radius: 10px;
+  padding: .5rem;
+  display: flex;
+  font-weight: 500;
+  font-size:1rem;
+  justify-content: space-evenly;
+  align-items: center;
+
  }
   
 </style>
