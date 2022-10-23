@@ -5,20 +5,14 @@
   import { onMount } from "svelte";
 
   const storage = getStorage();
-  const refs = ["work", "clients", "pictures", "misc"];
+  const refs = ["work", "clients", "pictures", "fbFiles"];
   $: files = {
-    work: [],
-    clients: [],
-    pictures: [],
-    misc: [],
+    fbFiles: [],
   };
 
   function getFileData() {
     files = {
-      work: [],
-      clients: [],
-      pictures: [],
-      misc: [],
+      fbFiles: [],
     };
     const user = localStorage.getItem("uid");
     refs.forEach((folder) => {
@@ -41,141 +35,24 @@
   });
 </script>
 
-<div class="accordion accordion-flush" id="fileAccordion">
-  <div class="accordion-item">
-    <h5 class="accordion-header" id="flush-headingOne">
-      <button
-        class="accordion-button collapsed fw-bold"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#flush-collapseOne"
-        aria-expanded="false"
-        aria-controls="flush-collapseOne"
-      >
-        Work Files
-      </button>
-    </h5>
-    <div
-      id="flush-collapseOne"
-      class="accordion-collapse collapse"
-      aria-labelledby="flush-headingOne"
-      data-bs-parent="#fileAccordion"
-    >
-      <div class="accordion-body">
-        <UploadRow folder="work" functionProp={() => getFileData()} />
-        {#if files.work.length > 0}
+        <div class = header> Welcome to your files </div>      
+        <UploadRow folder="fbFiles" functionProp={() => getFileData()} />
+        {#if files.fbFiles.length > 0}
           <Filetable
-            data={files.work}
-            folder="work"
+            data={files.fbFiles}
+            folder="fbFiles"
             functionProp={() => getFileData()}
           />
         {/if}
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h5 class="accordion-header" id="flush-headingTwo">
-      <button
-        class="accordion-button collapsed fw-bold"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#flush-collapseTwo"
-        aria-expanded="false"
-        aria-controls="flush-collapseTwo"
-      >
-        Client Files
-      </button>
-    </h5>
-    <div
-      id="flush-collapseTwo"
-      class="accordion-collapse collapse"
-      aria-labelledby="flush-headingTwo"
-      data-bs-parent="#fileAccordion"
-    >
-      <div class="accordion-body">
-        <UploadRow folder="clients" functionProp={() => getFileData()} />
-        {#if files.clients.length > 0}
-          <Filetable
-            data={files.clients}
-            folder="clients"
-            functionProp={() => getFileData()}
-          />
-        {/if}
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h5 class="accordion-header" id="flush-headingOne">
-      <button
-        class="accordion-button collapsed fw-bold"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#flush-collapseThree"
-        aria-expanded="false"
-        aria-controls="flush-collapseThree"
-      >
-        Pictures
-      </button>
-    </h5>
-    <div
-      id="flush-collapseThree"
-      class="accordion-collapse collapse"
-      aria-labelledby="flush-headingOne"
-      data-bs-parent="#fileAccordion"
-    >
-      <div class="accordion-body">
-        <UploadRow folder="pictures" functionProp={() => getFileData()} />
-        {#if files.pictures.length > 0}
-          <Filetable
-            data={files.pictures}
-            folder="pictures"
-            functionProp={() => getFileData()}
-          />
-        {/if}
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h5 class="accordion-header" id="flush-headingThree">
-      <button
-        class="accordion-button collapsed fw-bold"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#flush-collapseFour"
-        aria-expanded="false"
-        aria-controls="flush-collapseFour"
-      >
-        Misc Files
-      </button>
-    </h5>
-    <div
-      id="flush-collapseFour"
-      class="accordion-collapse collapse"
-      aria-labelledby="flush-headingThree"
-      data-bs-parent="#fileAccordion"
-    >
-      <div class="accordion-body">
-        <UploadRow folder="misc" functionProp={() => getFileData()} />
-        {#if files.misc.length > 0}
-          <Filetable
-            data={files.misc}
-            folder="misc"
-            functionProp={() => getFileData()}
-          />
-        {/if}
-      </div>
-    </div>
-  </div>
-</div>
+ 
 
 <style>
-  .accordion-button {
-    box-shadow: none;
-    background-color: #1b1b1b;
-    color:white;
-  }
-  .accordion-button:focus {
-    box-shadow: none;
-  }
+.header{
+  color:white;
+  font-weight:400;
+  font-size:2.5rem;
+  padding-top:50px;
+  
+}
   
 </style>

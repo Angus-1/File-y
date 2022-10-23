@@ -29,7 +29,7 @@
     font-family: "Open Sans", sans-serif;
     width: 75%;
     margin: 0 auto;
-    background-color: #1a1919;
+    background-color: #070707;
   }
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     :global(body) {

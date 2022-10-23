@@ -49,22 +49,14 @@
   export let functionProp = () => {};
 </script>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th style="width: 25%">File Name</th>
-      <th style="width: 25%">Uploaded</th>
-      <th style="width: 25%">File Size</th>
-      <th style="width: 25%">Actions</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class = table > 
     {#each data as { name, timeCreated, size }}
-      <tr>
-        <th scope="row">{name}</th>
-        <td>{timeCreated.substring(0, 10)}</td>
-        <td>{bytesToSize(size)}</td>
-        <td>
+    <hr>
+      <div>
+        <div class="title">{name}</div>
+        <div class = bytes >{timeCreated.substring(0, 10)}</div>
+        <div class = bytes >{bytesToSize(size)}</div>
+        <div>
           <button
             class="btn btn-primary"
             on:click={() => downloadFile(folder, name)}>Download</button
@@ -73,15 +65,31 @@
             class="btn btn-danger"
             on:click={() => deleteFile(folder, name)}>Delete</button
           >
-        </td>
-      </tr>
+        </div>
+      </div>
     {/each}
-  </tbody>
-</table>
+
+  </div>
 
 <style>
+    .table{
+    margin-top: 20px;
+    background-color: rgb(31, 48, 100);
+    border-radius: 10px;
+    padding:10px;
+    justify-content: center;
+  }
+  .title{
+    color:white;
+    font-size:2rem;
+  }
   .button
   {
     background-color:black;
   }
+
+ .bytes{
+  color:rgb(255, 253, 253);
+ }
+  
 </style>
