@@ -5,7 +5,7 @@
   import { onMount } from "svelte";
 
   const storage = getStorage();
-  const refs = ["work", "clients", "pictures", "fbFiles"];
+  const refs = ["fbFiles"];
   $: files = {
     fbFiles: [],
   };
