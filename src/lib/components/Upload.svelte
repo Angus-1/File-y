@@ -14,10 +14,12 @@
     const path = `${userId}/${folder}`;
 
     let myDropzone = new Dropzone(`#my-form-${folder}`);
+
     myDropzone.options.disablePreviews = true;
+
     myDropzone.on("addedfile", (upload) => {
       let storageRef = ref(storage, `${path}/${upload.name}`);
-      uploadBytes(storageRef, upload).then((snapshot) => {
+      uploadBytes(storageRef, upload).then(() => {
         console.log("Uploaded a file!");
         functionProp();
       });
@@ -29,6 +31,8 @@
 
 <style>
   .dropzone {
-    border: 2px dashed black;
+    border: 1px dashed rgba(160, 160, 160, 0.164);
+    text-align: center;
   }
+  
 </style>

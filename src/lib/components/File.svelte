@@ -89,10 +89,6 @@
     color:white;
     font-size:1.5rem;
   }
-  .button
-  {
-    background-color:black;
-  }
   
 
 
